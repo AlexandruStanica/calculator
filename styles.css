@@ -1,0 +1,70 @@
+@import url("https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Figtree", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+  background: linear-gradient(to right, #367885, #365085);
+}
+
+.calculator {
+  display: grid;
+  grid-template-columns: repeat(4, 100px);
+  grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+  justify-content: center;
+  align-content: center;
+  min-height: 100vh;
+}
+
+.display {
+  grid-column: 1 / -1;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+  flex-direction: column;
+  padding: 1rem;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+.display .previous-input {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 1.5rem;
+}
+
+.display .current-input {
+  color: white;
+  font-size: 2.5rem;
+}
+
+.calculator > button {
+  cursor: pointer;
+  font-size: 2.25rem;
+  border: 1px solid white;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.calculator > button:hover {
+  background-color: white;
+}
+
+.calculator > button:disabled {
+  background-color: rgba(170, 170, 170, 0.8);
+  cursor: not-allowed;
+}
+
+.row-span-2 {
+  grid-row: span 2;
+}
+
+.col-span-2 {
+  grid-column: span 2;
+}
